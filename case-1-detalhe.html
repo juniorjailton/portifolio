@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case 1 Detalhado: Estrutura de Dados</title>
+    <!-- Inclui o Tailwind CSS e o arquivo de estilos customizado -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f0f4f8; }
+        .sidebar-item {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .sidebar-item:hover {
+            background-color: #e0f2fe; /* blue-100 */
+            color: #1e40af; /* blue-800 */
+        }
+        .active-sidebar {
+            /* Estilo de destaque para a seção ativa */
+            background-color: #93c5fd; /* blue-300 */
+            color: #1e40af; /* blue-800 */
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- CABEÇALHO (Compacto para páginas de Case) -->
+    <header class="bg-blue-800 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-lg font-bold text-white hover:text-blue-300">&larr; Voltar para o Portfólio</a>
+            <span class="text-xl font-extrabold text-white">Case 1: Ecossistema de Dados</span>
+        </div>
+    </header>
+
+    <!-- LAYOUT PRINCIPAL: SIDEBAR + CONTEÚDO -->
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row mt-8 px-4 sm:px-6 lg:px-8">
+
+        <!-- SIDEBAR DE NAVEGAÇÃO (Fixo no Desktop - lg:sticky lg:top-20 é o que faz o efeito) -->
+        <aside class="lg:w-1/4 mb-8 lg:mb-0 lg:sticky lg:top-20 lg:h-screen lg:pr-8">
+            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500">
+                <h3 class="text-xl font-bold mb-4 text-blue-800">Guia do Case</h3>
+                <nav class="space-y-2">
+                    <!-- Links de navegação com data-target para o ID da seção -->
+                    <a href="#problema" class="sidebar-item active-sidebar block" data-target="problema">
+                        O Problema (Caos Inicial)
+                    </a>
+                    <a href="#jornada" class="sidebar-item block" data-target="jornada">
+                        A Jornada (Soluções por Nível)
+                    </a>
+                    <a href="#impacto" class="sidebar-item block" data-target="impacto">
+                        O Impacto da Estrutura
+                    </a>
+                    <a href="[LINK PARA O REPOSITÓRIO DO CASE 1]" target="_blank" class="sidebar-item block bg-yellow-100 text-yellow-800 font-bold mt-4 hover:bg-yellow-200">
+                        Ver Código no GitHub &rarr;
+                    </a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- CONTEÚDO DETALHADO DO CASE -->
+        <main class="lg:w-3/4 lg:pl-4">
+            <div class="bg-white p-8 rounded-xl shadow-xl">
+                <h1 class="text-4xl font-extrabold text-blue-900 mb-6">
+                    Case 1: Estruturação do Ecossistema de Dados na Empresa X
+                </h1>
+
+                <!-- SEÇÃO 1: O PROBLEMA -->
+                <section id="problema" class="content-section py-6 border-b border-gray-200">
+                    <h2 class="text-3xl font-bold text-yellow-700 mb-4">O Problema (Caos Inicial)</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        A Empresa X, uma Microempresa em rápido crescimento, enfrentava o desafio comum de **dados descentralizados e não confiáveis**. Toda a sua operação (finanças, vendas, estoque, pedidos) era registrada em uma única planilha no Google Sheets.
+                    </p>
+                    <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                        <li><span class="font-semibold">Inconsistência:</span> Falta de padronização nos inputs devido à ausência de validação.</li>
+                        <li><span class="font-semibold">Lentidão:</span> A planilha ficava pesada e travava com múltiplos usuários.</li>
+                        <li><span class="font-semibold">Visão Limitada:</span> Não havia um painel unificado que permitisse a visão sistêmica da saúde da empresa.</li>
+                    </ul>
+
+                    <!-- CONTEÚDO EXTRA PARA FORÇAR ROLAGEM -->
+                    <p class="text-gray-700 leading-relaxed mt-6">
+                        A complexidade aumentava com a entrada de novos colaboradores. Sem um fluxo de dados definido, cada pessoa criava sua própria forma de registrar informações, resultando em duplicação de entradas e relatórios que nunca batiam. Estima-se que 30% do tempo gerencial era gasto tentando conciliar dados ao invés de analisar resultados.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        A falta de uma única fonte da verdade (Single Source of Truth) significava que decisões estratégicas importantes, como ajustes de preço ou gestão de estoque, eram tomadas com base em percepções ou dados parciais. Isso gerava prejuízos ocultos e impedia o crescimento sustentável da Microempresa. O primeiro passo foi reconhecer que a planilha, embora fosse uma solução inicial, havia se tornado o gargalo principal da operação.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Analisamos o fluxo de dados existente e mapeamos todas as entradas manuais e pontos de falha. A prioridade era criar um ambiente onde a entrada de dados fosse intuitiva, validada e, mais importante, não dependesse da performance de uma única folha de cálculo acessada por dezenas de pessoas simultaneamente.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        [Insira aqui um diagrama simples de "Caos de Dados vs. Fluxo Organizado" se você tiver um.]
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        A transição para um modelo estruturado de dados não se tratava apenas de tecnologia, mas de cultura. Precisamos treinar a equipe para entender que a qualidade do dado na ponta era diretamente proporcional à qualidade do relatório na tomada de decisão.
+                    </p>
+                </section>
+
+                <!-- SEÇÃO 2: A JORNADA (SOLUÇÕES POR NÍVEL) -->
+                <section id="jornada" class="content-section py-6 border-b border-gray-200">
+                    <h2 class="text-3xl font-bold text-blue-700 mb-6">A Jornada (Soluções por Nível)</h2>
+
+                    <!-- Nível Básico: Solução Imediata -->
+                    <div class="mb-8 p-6 rounded-lg bg-blue-50 border-l-4 border-blue-500">
+                        <h3 class="text-2xl font-semibold mb-3 text-blue-900">Fase 1: O Que Ofereci em um Primeiro Momento (Nível Básico)</h3>
+                        <p class="text-gray-700 mb-3">
+                            Foco em estabilização e primeira visualização, usando recursos de baixo custo.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                            <li>**Estruturação da Planilha:** Criação de abas dedicadas e validações de dados para reduzir erros na fonte.</li>
+                            <li>**Visualização Gerencial:** Conexão direta ao **Looker Studio** para criar o primeiro dashboard de visão sistêmica (Finanças, Vendas, Estoque, Pedidos).</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-medium text-blue-700">
+                            **Habilidades:** Google Sheets (Formatação, Fórmulas), Visualização de Dados (Looker Studio/Power BI), Noções de Estrutura de Dados.
+                        </p>
+                    </div>
+
+                    <!-- Nível Avançado: Escala e Robustez -->
+                    <div class="mb-8 p-6 rounded-lg bg-yellow-50 border-l-4 border-yellow-500">
+                        <h3 class="text-2xl font-semibold mb-3 text-blue-900">Fase 2: A Solução Escalável (Nível Avançado)</h3>
+                        <p class="text-gray-700 mb-3">
+                            Com os problemas de lentidão e inconsistência, foi necessário migrar para uma arquitetura de dados mais robusta, aproveitando o ecossistema Google para otimizar custos.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-600 ml-4">
+                            <li>**Front-end AppSheet:** Criação de um Mini-ERP para captura, alteração e exclusão de dados, isolando o usuário do banco de dados principal.</li>
+                            <li>**BigQuery (Data Warehouse):** Armazenamento definitivo e tratamento dos dados no BigQuery. Isso garante velocidade, integridade e a capacidade de rodar consultas SQL complexas.</li>
+                            <li>**Tratamento Intermediário:** Uso de Google Sheets como uma camada intermediária de *staging*, facilitando a transição de dados para o BigQuery.</li>
+                            <li>**Relatórios Finais:** Looker Studio (BigQuery como fonte) para dashboards pesados, e Planilha Gerencial específica (Sheets) para a gestão operacional.</li>
+                        </ul>
+                        <p class="mt-4 text-sm font-medium text-yellow-700">
+                            **Habilidades:** Arquitetura Cloud (GCP/BigQuery), Data Modeling, ETL (Extração, Transformação, Carga), SQL Avançado, AppSheet.
+                        </p>
+                    </div>
+
+                    <!-- CONTEÚDO EXTRA PARA FORÇAR ROLAGEM -->
+                    <p class="text-gray-700 leading-relaxed mt-6">
+                        A migração para o BigQuery foi um ponto crucial. O volume de dados, embora pequeno para os padrões de grandes empresas, era insustentável para o Google Sheets. O BigQuery permitiu consultas complexas em tempo real, algo impossível antes.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        O AppSheet resolveu o problema de entrada de dados. Ao invés de manipular diretamente a planilha, os usuários interagiam com um aplicativo simples e validado no celular ou desktop, que garantia que apenas dados limpos e estruturados fossem inseridos no banco de dados. Isso reduziu os erros de input em quase 80% na primeira semana.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        O processo de ETL (Extração, Transformação e Carga) foi simplificado: AppSheet (E) &rarr; Google Sheets (T - Validação e Staging) &rarr; BigQuery (L - Armazenamento Final e Modelagem). Isso criou uma pipeline de dados clara e auditável.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Um desafio técnico foi a otimização das consultas SQL no BigQuery. Inicialmente, as consultas eram caras e lentas, mas refatoramos o *schema* e aplicamos técnicas de particionamento e clusterização, reduzindo o custo operacional para quase zero.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        A modelagem de dados no BigQuery seguiu o padrão Estrela (Star Schema), separando tabelas de Fato (Vendas, Transações) e Dimensão (Clientes, Produtos). Essa estrutura é fundamental para garantir que relatórios complexos no Looker Studio sejam rápidos e de fácil manutenção.
+                    </p>
+                </section>
+
+                <!-- SEÇÃO 3: O IMPACTO -->
+                <section id="impacto" class="content-section py-6">
+                    <h2 class="text-3xl font-bold text-green-700 mb-4">O Impacto da Estrutura</h2>
+                    <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+                        <p class="text-lg text-gray-800 leading-relaxed font-semibold">
+                            A empresa agora consegue enxergar-se como um todo.
+                        </p>
+                        <ul class="list-disc list-inside space-y-2 text-gray-700 ml-4 mt-3">
+                            <li>**Visibilidade Total:** Entendimento claro dos processos e do impacto real de suas ações.</li>
+                            <li>**Segurança e Integridade:** Garantia de que os dados são capturados corretamente (via AppSheet) e armazenados de forma segura e íntegra (via BigQuery).</li>
+                            <li>**Otimização de Custos:** Soluções implementadas dentro do próprio ecossistema Google Workspace existente, eliminando a necessidade de investimento em softwares caros.</li>
+                        </ul>
+                    </div>
+
+                    <!-- CONTEÚDO EXTRA PARA FORÇAR ROLAGEM -->
+                    <p class="text-gray-700 leading-relaxed mt-6">
+                        O resultado imediato foi a redução do tempo gasto em relatórios de 4 horas por semana para menos de 30 minutos. Os gestores agora têm painéis de controle atualizados em tempo real, permitindo uma resposta muito mais rápida às mudanças do mercado.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        O principal ganho estratégico foi a capacidade de fazer análises de lucro por produto, algo impossível antes devido aos dados financeiros espalhados. Isso levou a uma reestruturação de portfólio, focando em produtos de maior margem.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Em seis meses, a Microempresa registrou um aumento de 15% na margem de lucro operacional devido, em grande parte, à clareza e precisão dos novos dados. O investimento inicial no projeto de dados se pagou em menos de dois meses.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        **Conclusão:** Este case demonstra a capacidade de escalar uma solução de dados de um nível básico (planilhas) para uma arquitetura avançada de Data Warehouse (BigQuery/AppSheet), usando recursos de forma inteligente e gerando um impacto financeiro direto e mensurável.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        [Insira aqui uma imagem de um dashboard no Looker Studio como exemplo]
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        A próxima etapa seria automatizar a ingestão de dados de outras fontes externas, como APIs de parceiros, consolidando ainda mais a visão 360 do negócio.
+                    </p>
+                </section>
+
+                <div class="mt-12 pt-6 border-t border-gray-200 text-center">
+                    <a href="index.html" class="inline-block bg-gray-200 text-gray-800 font-bold py-2 px-6 rounded-full hover:bg-gray-300 transition">&larr; Voltar para a Home</a>
+                    <a href="case-2-detalhe.html" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition ml-4">Próximo Case &rarr;</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-gray-800 text-white py-8 mt-12 text-center">
+        <p class="text-sm">Desenvolvido com Dados e Storytelling. &copy; 2025 [Seu Nome].</p>
+    </footer>
+
+    <!-- LÓGICA DE NAVEGAÇÃO DA SIDEBAR (JavaScript) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            const headerHeight = document.querySelector('header').offsetHeight;
+
+            // 1. FUNCIONALIDADE DE SCROLL SUAVE (Clicar no link da sidebar)
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    // Remove a classe ativa de todos os itens e adiciona ao item clicado
+                    // NOTE: A classe 'active-sidebar' será redefinida logo em seguida pelo IntersectionObserver,
+                    // mas mantemos esta lógica para garantir que o link clicado seja destacado imediatamente.
+                    sidebarItems.forEach(i => i.classList.remove('active-sidebar'));
+                    item.classList.add('active-sidebar');
+
+                    // Calcula a posição do elemento alvo
+                    const targetId = item.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        // Calcula o deslocamento para parar a seção abaixo do cabeçalho fixo
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerHeight - 20; // -20 é uma margem extra
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                });
+            });
+
+            // 2. FUNCIONALIDADE DE DESTAQUE NA ROLAGEM (Intersection Observer)
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    // Verifica se a seção está intersectando o viewport
+                    if (entry.isIntersecting) {
+                        const targetId = entry.target.id; // ID da seção (ex: 'problema', 'jornada')
+                        
+                        // Atualiza a classe ativa na sidebar
+                        sidebarItems.forEach(item => {
+                            if (item.getAttribute('data-target') === targetId) {
+                                // Remove active de todos
+                                sidebarItems.forEach(i => i.classList.remove('active-sidebar'));
+                                // Adiciona active ao item visível
+                                item.classList.add('active-sidebar');
+                            }
+                        });
+                    }
+                });
+            }, {
+                // Configura o rootMargin para que o ponto de detecção seja abaixo do header (o 'ponto de observação' é a área abaixo do cabeçalho)
+                rootMargin: `-${headerHeight + 5}px 0px 0px 0px`,
+                // threshold de 0.1 significa que a seção é detectada quando 10% dela está visível
+                threshold: 0.1
+            });
+
+            // Observa todas as seções de conteúdo
+            document.querySelectorAll('.content-section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+</html>

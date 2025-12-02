@@ -1,0 +1,14 @@
+/*
+ * Este arquivo CSS é apenas para garantir que a sidebar se comporte corretamente em telas grandes.
+ * A maior parte do estilo é feita pelo Tailwind CSS diretamente no HTML.
+ */
+
+/* Força a barra de navegação a ter uma altura específica para o cálculo do scroll */
+header {
+    height: 60px; /* Altura do header */
+}
+
+/* Garante que o container principal tenha um pouco de espaço no topo */
+.max-w-7xl {
+    margin-top: 0;
+}
