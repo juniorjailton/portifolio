@@ -1,5 +1,5 @@
 # portifolio
-Portifólio com os projetos de Jailton Lima
+Portifólio com os projetos de Jailton Lima!
 ## 🛠️ Meus Projetos
 
 Olá! Abaixo estão meus projetos de Data Science, divididos por nível de complexidade e área de foco, do tratamento de dados às análises preditivas.
