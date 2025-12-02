@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio de Data Science - [Seu Nome]</title>
+    <!-- Inclui o Tailwind CSS para estilos rápidos e responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuração de Fontes e Cores do Tailwind -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fc; /* Fundo muito claro */
+        }
+        .data-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .data-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- CABEÇALHO/NAVEGAÇÃO -->
+    <header class="bg-indigo-600 shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-white">
+                Meu Portfólio de Dados
+            </h1>
+            <nav class="space-x-4 hidden md:block">
+                <a href="#sobre" class="text-white hover:text-indigo-200 transition duration-150 font-medium">Quem Sou</a>
+                <a href="#projetos" class="text-white hover:text-indigo-200 transition duration-150 font-medium">Projetos</a>
+                <a href="#sugestoes" class="text-white hover:text-indigo-200 transition duration-150 font-medium">Sugestões</a>
+            </nav>
+            <!-- Menu mobile simplificado -->
+            <button class="md:hidden text-white text-xl" onclick="alert('Use a navegação no topo ou role para baixo para ver o conteúdo completo!')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- SEÇÃO 1: QUEM SOU EU? -->
+    <section id="sobre" class="py-16 md:py-24 bg-white shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-indigo-700 sm:text-5xl">
+                    Quem Sou Eu?
+                </h2>
+                <p class="mt-4 text-xl text-gray-500">
+                    Analista de Dados | Apaixonado por transformar dados em decisões estratégicas.
+                </p>
+            </div>
+
+            <div class="lg:flex lg:items-center lg:space-x-12">
+                <!-- Coluna da Foto e Contato -->
+                <div class="lg:w-1/3 mb-8 lg:mb-0">
+                    <div class="bg-gray-50 p-6 rounded-xl shadow-lg border border-gray-200">
+                        <!-- Imagem de Perfil (Substitua pela sua) -->
+                        <img class="mx-auto h-40 w-40 rounded-full object-cover mb-6 border-4 border-indigo-500 shadow-md"
+                             src="https://placehold.co/160x160/312e81/ffffff?text=Sua+Foto"
+                             alt=""
+                             onerror="this.onerror=null; this.src='https://placehold.co/160x160/312e81/ffffff?text=Sua+Foto';">
+
+                        <h3 class="text-xl font-bold text-center text-gray-900 mb-4">
+                            [Seu Nome Completo]
+                        </h3>
+                        <!-- Contatos -->
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                                <a href="mailto:seu.email@exemplo.com" class="hover:text-indigo-600">[Seu Email]</a>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm-8 2a6 6 0 004.816 2.378l1.373 1.373A1 1 0 0014 18H6a1 1 0 00-.787-.378l1.373-1.373A6 6 0 008 14z" clip-rule="evenodd"/></svg>
+                                <a href="[Seu LinkedIn URL]" target="_blank" class="hover:text-indigo-600">LinkedIn</a>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-indigo-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.169 6.839 9.489.5.092.682-.217.682-.483 0-.237-.008-.867-.013-1.795-2.782.604-3.367-1.34-3.367-1.34-.455-1.154-1.107-1.46-1.107-1.46-.905-.62.068-.607.068-.607 1.002.07 1.53.948 1.53.948.89 1.53 2.342 1.087 2.913.829.09-.643.349-1.087.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.09.39-1.983 1.03-2.675-.103-.254-.447-1.267.098-2.636 0 0 .84-.27 2.75 1.025.798-.222 1.647-.333 2.495-.337.848.004 1.697.115 2.495.337 1.91-1.295 2.75-1.025 2.75-1.025.545 1.369.201 2.382.098 2.636.64.692 1.03 1.585 1.03 2.675 0 3.842-2.338 4.686-4.566 4.935.36.307.682.913.682 1.84 0 1.33-.012 2.404-.012 2.736 0 .267.181.574.688.481C17.135 18.17 20 14.418 20 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+                                <a href="[Seu GitHub URL]" target="_blank" class="hover:text-indigo-600">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Coluna da Biografia e Habilidades -->
+                <div class="lg:w-2/3">
+                    <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                        <h3 class="text-2xl font-semibold text-indigo-600 mb-4 border-b pb-2">
+                            Minha Missão com Dados
+                        </h3>
+                        <p class="text-gray-700 leading-relaxed mb-6">
+                            Sou um profissional de dados com experiência em todo o ciclo de vida da análise: desde a ingestão e limpeza de dados brutos até a modelagem preditiva avançada. Meu objetivo é extrair o máximo valor dos dados para impulsionar a tomada de decisões e a inovação. Acredito que a clareza na comunicação e a ética são tão importantes quanto a precisão dos algoritmos.
+                        </p>
+
+                        <h3 class="text-xl font-semibold text-indigo-600 mb-3 border-b pb-1">
+                            Habilidades Principais
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Python (Pandas, Scikit-learn)</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">SQL Avançado</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Visualização (Tableau, Power BI, Matplotlib)</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Estatística Descritiva</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-sm font-medium px-3 py-1 rounded-full">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: PROJETOS POR NÍVEL -->
+    <section id="projetos" class="py-16 md:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-800 sm:text-5xl">
+                    Meus Projetos de Data Science
+                </h2>
+                <p class="mt-4 text-xl text-gray-500">
+                    A jornada completa da análise: da limpeza à previsão.
+                </p>
+            </div>
+
+            <!-- CONTAINER GERAL DOS PROJETOS -->
+            <div class="space-y-16">
+
+                <!-- NÍVEL 1: TRATAMENTO DE DADOS -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-t-4 border-yellow-500">
+                    <h3 class="text-3xl font-bold text-yellow-600 mb-6 flex items-center space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path d="M7 3H2a1 1 0 00-1 1v12a1 1 0 001 1h5l2-2h2l-2 2h5a1 1 0 001-1V4a1 1 0 00-1-1H7zM5 7h4v2H5V7zm0 4h4v2H5v-2zM11 7h4v2h-4V7zm0 4h4v2h-4v-2z"/></svg>
+                        <span>1. Tratamento e Limpeza de Dados</span>
+                    </h3>
+                    <p class="mb-6 text-gray-600">Foco em ETL, qualidade dos dados, engenharia de *features* e preparação para análise. Aqui começa a base de todo projeto.</p>
+
+                    <!-- PROJETOS DO NÍVEL 1 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Projeto Exemplo 1.1 -->
+                        <div class="data-card bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Limpeza de Dados de Vendas</h4>
+                            <p class="text-sm text-gray-600 mb-3">Notebook Python com Pandas para tratar mais de 500k registros, corrigindo inconsistências e padronizando strings.</p>
+                            <span class="inline-block bg-yellow-200 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Python/Pandas</span>
+                            <a href="[LINK PARA O REPOSITÓRIO OU NOTEBOOK 1.1]" target="_blank" class="mt-3 block text-indigo-600 hover:text-indigo-800 font-medium">Ver Projeto &rarr;</a>
+                        </div>
+                        <!-- Projeto Exemplo 1.2 -->
+                        <div class="data-card bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Otimização de Query com SQL</h4>
+                            <p class="text-sm text-gray-600 mb-3">Criação de stored procedures e views para otimizar a extração de dados complexos em um banco de dados relacional.</p>
+                            <span class="inline-block bg-yellow-200 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">SQL/PostgreSQL</span>
+                            <a href="[LINK PARA O REPOSITÓRIO OU NOTEBOOK 1.2]" target="_blank" class="mt-3 block text-indigo-600 hover:text-indigo-800 font-medium">Ver Projeto &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NÍVEL 2: CRIAÇÃO DE DASHBOARDS -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-t-4 border-blue-500">
+                    <h3 class="text-3xl font-bold text-blue-600 mb-6 flex items-center space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/></svg>
+                        <span>2. Criação de Dashboards e Visualização</span>
+                    </h3>
+                    <p class="mb-6 text-gray-600">Conversão de dados limpos em insights visuais claros e interativos, focando na narrativa e usabilidade para o público executivo.</p>
+
+                    <!-- PROJETOS DO NÍVEL 2 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Projeto Exemplo 2.1 -->
+                        <div class="data-card bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">KPIs de Marketing (Power BI)</h4>
+                            <p class="text-sm text-gray-600 mb-3">Dashboard interativo para rastrear o desempenho de campanhas de marketing digital em tempo real.</p>
+                            <span class="inline-block bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Power BI</span>
+                            <a href="[LINK PARA O DASHBOARD HOSPEDADO 2.1]" target="_blank" class="mt-3 block text-indigo-600 hover:text-indigo-800 font-medium">Ver Dashboard &rarr;</a>
+                        </div>
+                        <!-- Projeto Exemplo 2.2 -->
+                        <div class="data-card bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Relatório de Logística (Tableau)</h4>
+                            <p class="text-sm text-gray-600 mb-3">Análise espacial e de séries temporais para otimizar rotas e reduzir custos operacionais em distribuição.</p>
+                            <span class="inline-block bg-blue-200 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Tableau</span>
+                            <a href="[LINK PARA O DASHBOARD HOSPEDADO 2.2]" target="_blank" class="mt-3 block text-indigo-600 hover:text-indigo-800 font-medium">Ver Dashboard &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NÍVEL 3: ANÁLISE DESCRITIVA -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-t-4 border-green-500">
+                    <h3 class="text-3xl font-bold text-green-600 mb-6 flex items-center space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM5 9h2a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1v-2a1 1 0 011-1zm6 0h2a1 1 0 011 1v2a1 1 0 01-1 1h-2a1 1 0 01-1-1v-2a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                        <span>3. Análise de Dados Descritivas</span>
+                    </h3>
+                    <p class="mb-6 text-gray-600">Exploração aprofundada para entender o "o quê" e o "porquê" dos eventos passados. Identificação de padrões, correlações e anomalias.</p>
+
+                    <!-- PROJETOS DO NÍVEL 3 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Projeto Exemplo 3.1 -->
+                        <div class="data-card bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Análise de Sentimento em Reviews</h4>
+                            <p class="text-sm text-gray-600 mb-3">Uso de NLP (Processamento de Linguagem Natural) para categorizar feedback de clientes e determinar a satisfação geral.</p>
+                            <span class="inline-block bg-green-200 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">NLP/Python</span>
+                            <a href="[LINK PARA O REPOSITÓRIO OU RELATÓRIO 3.1]" target="_blank" class="mt-3 block text-indigo-600 hover:text-indigo-800 font-medium">Ver Projeto &rarr;</a>
+                        </div>
+                        <!-- Projeto Exemplo 3.2 -->
+                        <div class="data-card bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Estudo de Cohort para Retenção</h4>
+                            <p class="text-sm text-gray-600 mb-3">Análise estatística para visualizar a taxa de retenção de usuários ao longo do tempo e identificar pontos de queda.</p>
+                            <span class="inline-block bg-green-200 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Estatística/R</span>
+                            <a href="[LINK PARA O REPOSITÓRIO OU RELATÓRIO 3.2]" target="_blank" class="mt-3 block text-indigo-600 hover:text-indigo-800 font-medium">Ver Projeto &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NÍVEL 4: ANÁLISE PREDITIVA -->
+                <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border-t-4 border-red-500">
+                    <h3 class="text-3xl font-bold text-red-600 mb-6 flex items-center space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd"/></svg>
+                        <span>4. Análise de Dados Preditiva e Machine Learning</span>
+                    </h3>
+                    <p class="mb-6 text-gray-600">Construção e avaliação de modelos para prever resultados futuros, como preços, risco de churn ou demanda de estoque.</p>
+
+                    <!-- PROJETOS DO NÍVEL 4 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Projeto Exemplo 4.1 -->
+                        <div class="data-card bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Modelo de Previsão de Preços</h4>
+                            <p class="text-sm text-gray-600 mb-3">Implementação de Regressão Linear e Random Forest para estimar o valor de mercado de um ativo específico.</p>
+                            <span class="inline-block bg-red-200 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Regressão/Scikit-learn</span>
+                            <a href="[LINK PARA O REPOSITÓRIO OU NOTEBOOK 4.1]" target="_blank" class="mt-3 block text-indigo-600 hover:text-indigo-800 font-medium">Ver Projeto &rarr;</a>
+                        </div>
+                        <!-- Projeto Exemplo 4.2 -->
+                        <div class="data-card bg-gray-50 p-5 rounded-xl border border-gray-200">
+                            <h4 class="text-xl font-semibold text-gray-900 mb-2">Classificação de Risco de Churn</h4>
+                            <p class="text-sm text-gray-600 mb-3">Uso de modelos de Classificação (Ex: Logistic Regression, XGBoost) para prever quais clientes irão cancelar o serviço.</p>
+                            <span class="inline-block bg-red-200 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Classificação/XGBoost</span>
+                            <a href="[LINK PARA O REPOSITÓRIO OU NOTEBOOK 4.2]" target="_blank" class="mt-3 block text-indigo-600 hover:text-indigo-800 font-medium">Ver Projeto &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5: SUGESTÕES E PRÓXIMOS PASSOS -->
+    <section id="sugestoes" class="py-16 bg-indigo-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-extrabold text-indigo-700 sm:text-5xl">
+                    5. O Próximo Nível: Sugestões e Futuro
+                </h2>
+                <p class="mt-4 text-xl text-gray-500">
+                    O aprendizado não para. Minha visão para a evolução deste portfólio.
+                </p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-2xl border-l-8 border-indigo-600">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    Muitos projetos de dados evoluem. Reconhecer as limitações de um projeto concluído e planejar as próximas etapas demonstra maturidade profissional.
+                </p>
+                <ul class="space-y-4 text-gray-800">
+                    <li class="flex items-start space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p><strong>MLOps e Produção:</strong> Planejo implementar o MLOps (Machine Learning Operations) no Projeto 4.2 (Churn) usando **Docker** e **Kubernetes** para colocá-lo em produção de forma contínua.</p>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p><strong>Big Data/Cloud:</strong> O Projeto 1.1 será migrado de Pandas para **PySpark** rodando em **Google Cloud (GCP)** para demonstrar escalabilidade em grandes volumes de dados.</p>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-indigo-500 mt-1 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        <p><strong>Aprimoramento do Dashboard:</strong> No Projeto 2.1, vou adicionar uma camada de **análise de sensibilidade** para que os usuários possam simular cenários.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-sm">
+                Desenvolvido com 💖 e Dados. &copy; 2025 [Seu Nome]. Todos os direitos reservados.
+            </p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="[Seu LinkedIn URL]" target="_blank" class="text-gray-400 hover:text-white transition">LinkedIn</a>
+                <a href="[Seu GitHub URL]" target="_blank" class="text-gray-400 hover:text-white transition">GitHub</a>
+                <a href="mailto:seu.email@exemplo.com" class="text-gray-400 hover:text-white transition">Email</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
